@@ -121,7 +121,7 @@ async function deleteTodo(event) {
       method: 'DELETE',
     });
   } catch (error) {
-    alert('Something went wrong!');
+    alert('Something went wrong');
     return;
   }
 
