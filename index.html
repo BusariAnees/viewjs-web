@@ -24,14 +24,15 @@
         </form>
       </section>
       <section id="todos">
-      <p v-if="todos.length == 0" >new tools added</p>
+      <p v-if="todos.length == 0 && !isloading" >new tools added</p>
+      <p v-else-if="isloading"> loading...  </p>
         <ul v-else id="todos-list">
           <li v-for="todo in todos">
             <p>{{todo.text}}</p>
             <div>
               <button @click="startEditTodo(todo.id)">Edit</button>
               <button @click="deleteTodo(todo.id)" >Delete</button>
-            </div>
+            </div>0
           </li>
         </ul>
       </section>
